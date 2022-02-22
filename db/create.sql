@@ -6,18 +6,17 @@ CREATE TABLE products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   code VARCHAR(15),
   name VARCHAR(255),
-  description TEXT,
-  price NUMERIC(10, 2)
+  price NUMERIC(10, 2),
+  description TEXT
+  
 );
 
 CREATE TABLE information (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   product_id INTEGER,
-  maat TEXT,
-  geslacht TEXT,
-  prijs INTEGER,
-  kleur TEXT,
-  materie TEXT
+  size TEXT,
+  model TEXT,
+  material TEXT
 );
 
 
@@ -30,11 +29,31 @@ CREATE TABLE information (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price) values ('Kleding', 'om te dragen', '816905633-0', 10);
-insert into products (name, description, code, price) values ('Post Mortem', 'Nulla ut erat id mauris vulputate elementum. Nullam varius.', '077030122-3', 11);
-insert into products (name, description, code, price) values ('Scarlet and the Black, The', 'Pellentesque at nulla. Suspendisse potenti.', '445924201-X', 13.5);
-insert into products (name, description, code, price) values ('Aquí llega Condemor, el pecador de la pradera', 'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa.', '693155505-7', 13.5);
-insert into products (name, description, code, price) values ('Kiss for Corliss, A (Almost a Bride)', 'Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.', '686928463-6', 14);
-insert into products (name, description, code, price) values ('Velvet Goldmine', 'Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla.', '492662523-7', 14);
+
+insert into products (name, price, description, code ) values ('custom 
+Unicorn x Rainbow', 60.00, 'om te dragen', '816905633-0');
+insert into products (name,price, description, code) values ('Jordan 1 high x Travis Scott ', 2238.00, 'The Travis Scott x Air Jordan 1 High OG is the limited edition collaboration from the rap superstar and Jordan Brand on the iconic silhouette that features a major twist.', '077030122-3');
+insert into products (name, price, description, code ) values ('Off white vasity jacket', 1650.00, 'Off-White’s industrial themes collide with preppy Americana for AW20 to deliver this green varsity jacket. Made using a combination of virgin wool and white leather, it’s decorated with bold collegiate appliqués throughout, and completed with sporty striped ribbed knits.', '445924201-X');
+insert into products (name, price, description, code) values ('custom Angel jeans', 80.99, 'the custom Angel jeans is designed with our new V fit which is relaxed throughout and features a full color angel heat press artwork at the leg opening and finished with an unconstructed hem.', '693155505-7');
+insert into products (name,price, description, code) values ('custom Skeleton jeans',  80.99, 'the custom Skeleton jeans is designed with our new D fit which is relaxed throughout with an extended inseam for stacking and features sewn-on skeleton artwork in fleece on both legs and is constructed from light wash denim with a raw leg opening.', '686928463-6');
+insert into products (name,price, description, code) values (' Essential hoodie ' , 160.99, 'Essential Hoodie is a super soft, oversized hoodie that’s perfect for lounging around the house or wearing out and about.
+It’s made of our signature cotton-blend fabric with the right amount of stretch so you can move freely without restriction.', '492662523-7');
 
 
+
+/*
+
+insert into information (size, model, material) values ('custom 
+Unicorn x Rainbow', 'om te dragen', '816905633-0');
+
+insert into information (size, model, material) values ('Jordan 1 high x Travis Scott ', 'The Travis Scott x Air Jordan 1 High OG is the limited edition collaboration from the rap superstar and Jordan Brand on the iconic silhouette that features a major twist.', '077030122-3');
+
+insert into  information(size, model, material) values ('Off white vasity jacket', 'Off-White’s industrial themes collide with preppy Americana for AW20 to deliver this green varsity jacket. Made using a combination of virgin wool and white leather, it’s decorated with bold collegiate appliqués throughout, and completed with sporty striped ribbed knits.', '445924201-X');
+
+insert into information(size, model, material) values ('custom Angel jeans', 'the custom Angel jeans is designed with our new V fit which is relaxed throughout and features a full color angel heat press artwork at the leg opening and finished with an unconstructed hem.', '693155505-7');
+
+insert into information (size, model, material) values ('custom Skeleton jeans', 'the custom Skeleton jeans is designed with our new D fit which is relaxed throughout with an extended inseam for stacking and features sewn-on skeleton artwork in fleece on both legs and is constructed from light wash denim with a raw leg opening.', '686928463-6');
+
+insert into information (size, model, material) values (' Essential hoodie ' , 'Essential Hoodie is a super soft, oversized hoodie that’s perfect for lounging around the house or wearing out and about.
+It’s made of our signature cotton-blend fabric with the right amount of stretch so you can move freely without restriction.', '492662523-7');
+*/

@@ -17,6 +17,11 @@ CREATE TABLE maat (
  maten VARCHAR(255)
 );
 
+  
+CREATE TABLE categorie (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ name VARCHAR(255)
+); 
 
 --
 -- populate with data
@@ -33,7 +38,7 @@ insert into maat (maten) values ('L');
 insert into maat (maten) values ('XL');
 
 insert into products (name, price, description, geslacht, code, maten_id) values ('custom 
-Unicorn x Rainbow', 60.00, 'om te dragen', 'Man & Vrouw', '816905633-0', 1);
+Unicorn x Rainbow', 60.00, 'om te dragen', 'Man & Vrouw', '816905633-0', 1 );
 insert into products (name,price, description, geslacht, code, maten_id) values ('Jordan 1 high x Travis Scott ', 2238.00, 'The Travis Scott x Air Jordan 1 High OG is the limited edition collaboration from the rap superstar and Jordan Brand on the iconic silhouette that features a major twist.', 'Man', '077030122-3', 2);
 insert into products (name, price, description, geslacht, code, maten_id) values ('Off white vasity jacket', 1650.00, 'Off-White’s industrial themes collide with preppy Americana for AW20 to deliver this green varsity jacket. Made using a combination of virgin wool and white leather, it’s decorated with bold collegiate appliqués throughout, and completed with sporty striped ribbed knits.', 'Man', '445924201-X', 3);
 insert into products (name, price, description, geslacht, code, maten_id) values ('custom Angel jeans', 80.99, 'the custom Angel jeans is designed with our new V fit which is relaxed throughout and features a full color angel heat press artwork at the leg opening and finished with an unconstructed hem.', 'Man', '693155505-7', 4);
@@ -41,8 +46,8 @@ insert into products (name,price, description, geslacht, code, maten_id) values 
 insert into products (name,price, description, geslacht, code, maten_id) values (' Essential T shirt ' , 160.99, 'Essential T shirt is a super soft, oversized T that’s perfect for lounging around the house or wearing out and about.
 It’s made of our signature cotton-blend fabric with the right amount of stretch so you can move freely without restriction.','Man & Vrouw', '492662523-7', 2); 
 
-
-
+insert into categorie (name) values ('top');
+insert into categorie (name) values ('bottom')
 
 /*
 

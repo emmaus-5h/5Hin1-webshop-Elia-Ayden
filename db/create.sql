@@ -16,12 +16,22 @@ CREATE TABLE maat (
  id INTEGER PRIMARY KEY AUTOINCREMENT,
  maten VARCHAR(255)
 );
-
-  
-CREATE TABLE categorie (
+CREATE TABLE categorien (
  id INTEGER PRIMARY KEY AUTOINCREMENT,
- name VARCHAR(255)
+ categorie TEXT
 ); 
+ 
+  CREATE TABLE materials (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ material TEXT
+); 
+
+  CREATE TABLE recycled (
+ id INTEGER PRIMARY KEY AUTOINCREMENT,
+ recycle TEXT
+); 
+  
+
 
 --
 -- populate with data
@@ -50,9 +60,15 @@ insert into products (name, price, description, geslacht, code, maten_id) values
 insert into products (name, price, description, geslacht, code, maten_id) values ('King Letterman jacket', 660.00, 'The King Letterman jacket is made from a premium wool blend with contrasting leather sleeves. The regular fit bomber jacket is fully lined on the inside', 'Man & Vrouw', '816905633-0', 2);
 insert into products (name, price, description, geslacht, code, maten_id) values ('Essential hoodie', 330.00, 'Essential hoodie is a super soft, oversized hoodie that’s perfect for lounging around the house or wearing out and about.', 'Man & Vrouw', '816905633-0', 3);  
   
-insert into categorie (name) values ('top');
-insert into categorie (name) values ('bottom')
+insert into categorien (categorie) values ('top');
+insert into categorien (categorie) values ('bottom')
 
+insert into materials (material) values ('cotton');
+insert into materials (material) values ('nylon');
+insert into materials (material) values ('denim');
+
+insert into recycled (recycle) values ('yes');
+insert into recycled (recycle) values ('no');
 /*
 
 insert into information (size, model, material) values ('custom 

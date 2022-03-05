@@ -60,10 +60,10 @@
 					<ul class="product-properties">
             <li><span class="propert-name">Geslacht:</span><span class="product_geslacht"></span></li>
             <li><span class="propert-name">Maat:</span><span class="product_maat"></span></li>
-            <li><span class="propert-name">categorie:</span><span class="product_categorie"></span></li>
+						<li><span class="propert-name">categorie:</span><span class="product_categorie"></span></li>
             <li><span class="propert-name">materiaal:</span><span class="product_materiaal"></span></li>
             <li><span class="propert-name">recycled:</span><span class="product_recycled"></span></li>
-						<li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
+            <li><span class="propert-name">Prijs:</span><span class="product_price"></span></li>
 						<li><span class="propert-name">Code:</span><span class="product_code"></span></li>
 					</ul>
 					<input class="product_amount" type="number" value="1" min="1">
@@ -129,9 +129,9 @@
               clone.querySelector(".product_description").textContent =`${product.description.substr(0, 100)}...`
               clone.querySelector(".product_geslacht").textContent =`${product.geslacht}`
               clone.querySelector(".product_maat").textContent =`${product.maten}`
-               clone.querySelector(".product_categorie").textContent =`${product.categorie}`
-               clone.querySelector(".product_materiaal").textContent =`${product.materiaal}`
-               clone.querySelector(".product_recycled").textContent =`${product.recycled}`
+              clone.querySelector(".product_categorie").textContent =`${product.categorie}`
+              clone.querySelector(".product_materiaal").textContent =`${product.materiaal}`
+              clone.querySelector(".product_recycled").textContent =`${product.recycled}`
               clone.querySelector(".product_price").textContent = `€ ${product.price.toFixed(2)}`
               clone.querySelector(".product_code").textContent = product.code
               clone.querySelector(".product_id").value = product.id
